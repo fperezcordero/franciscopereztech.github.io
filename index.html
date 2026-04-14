@@ -3,427 +3,864 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Perez | IT Infrastructure & Operations Leadership</title>
-<meta name="description" content="Francisco Perez - IT Infrastructure & Operations Leadership. IT Manager, Infrastructure, Operations, Cloud, Support and Business Systems.">
+<title>Francisco Perez | IT Manager & Infrastructure Leader</title>
+<meta name="description" content="Francisco Perez - IT Manager with 28 years of experience in enterprise infrastructure, multi-site operations, ERP systems, and cloud modernization. Based in Tampa, FL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style>
-:root{
---primary:#0b2a5b;
---secondary:#1f5fb6;
---accent:#4d9cff;
---light:#f5f8fc;
---text:#1a2b4a;
---muted:#5b6b85;
---card:#ffffff;
---border:#e3eaf5;
+:root {
+  --navy: #0b2347;
+  --navy-mid: #0f3060;
+  --blue: #1a56a0;
+  --accent: #2e7fd8;
+  --accent-light: #5ba3f0;
+  --gold: #c8a84b;
+  --light: #f4f7fb;
+  --white: #ffffff;
+  --text: #1a2b3c;
+  --muted: #5b6d82;
+  --border: #dce6f0;
 }
 
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Segoe UI, Arial, sans-serif;
-color:var(--text);
-background:var(--light);
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.65;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.nav{
-background:var(--primary);
-color:white;
-position:sticky;
-top:0;
-z-index:10;
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
-.nav-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 0;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-font-weight:600;
-font-size:18px;
+.fp-badge {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.5px;
 }
 
-
-.brand-text{
-line-height:1.15;
+.brand-name {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.brand-text small{
-display:block;
-font-size:12px;
-font-weight:500;
-opacity:.8;
-margin-top:2px;
+.brand-name span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.65;
+  margin-top: 1px;
 }
 
-.logo-box{
-background:linear-gradient(135deg,#1f5fb6,#4d9cff);
-border-radius:8px;
-padding:6px 8px;
-text-align:center;
-color:white;
-min-width:50px;
+.nav-links {
+  display: flex;
+  gap: 28px;
 }
 
-.logo-fp{
-font-size:16px;
-font-weight:700;
-line-height:1;
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.logo-sub{
-font-size:9px;
-opacity:.85;
-margin-top:2px;
+.nav-links a:hover { color: white; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, #133d7a 100%);
+  color: white;
+  padding: 90px 24px 80px;
+  position: relative;
+  overflow: hidden;
 }
 
-.nav a{
-color:white;
-margin-left:20px;
-font-size:14px;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
 }
 
-.hero{
-background:linear-gradient(135deg,#071a3a,#0b2a5b);
-color:white;
-padding:80px 0 70px;
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -40px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
 }
 
-.hero h1{
-font-size:40px;
-margin-bottom:15px;
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.hero p{
-font-size:18px;
-opacity:.9;
-max-width:800px;
+.hero-photo img {
+  width: 190px;
+  height: 190px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
-.hero-sub{
-margin-top:20px;
-color:#9ec4ff;
-font-weight:600;
-letter-spacing:1px;
+.hero-tag {
+  display: inline-block;
+  background: rgba(46,127,216,0.3);
+  border: 1px solid rgba(91,163,240,0.4);
+  color: var(--accent-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
 }
 
-.cta{
-margin-top:30px;
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 8px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 20px;
-border-radius:6px;
-font-weight:600;
-margin-right:10px;
+.hero h1 span { color: var(--accent-light); }
+
+.hero-title {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
-.btn-primary{
-background:var(--accent);
-color:white;
+.hero-summary {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  max-width: 620px;
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
-.btn-outline{
-border:1px solid rgba(255,255,255,.3);
-color:white;
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
 }
 
-section{
-padding:60px 0;
+.badge {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
-.section-title{
-font-size:28px;
-margin-bottom:10px;
+.badge.gold {
+  background: rgba(200,168,75,0.15);
+  border-color: rgba(200,168,75,0.4);
+  color: #e8c96a;
 }
 
-.section-sub{
-color:var(--muted);
-margin-bottom:35px;
+.hero-cta {
+  display: flex;
+  gap: 12px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:8px;
-border:1px solid var(--border);
+.btn-primary {
+  background: var(--accent);
+  color: white;
 }
 
-.profile-block{
-display:grid;
-grid-template-columns:180px 1fr;
-gap:30px;
-align-items:center;
-margin-bottom:30px;
+.btn-primary:hover { background: #2570c2; }
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
 }
 
-.profile-name{
-font-size:26px;
-font-weight:600;
-margin-bottom:6px;
+.btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-.profile-title{
-color:var(--secondary);
-font-weight:600;
-margin-bottom:10px;
+.stats-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.profile-meta{
-color:var(--muted);
-font-size:14px;
+.stat {
+  padding: 24px 20px;
+  text-align: center;
+  border-right: 1px solid var(--border);
 }
 
-.resume-block{
-background:white;
-padding:30px;
-border-radius:8px;
-border:1px solid var(--border);
+.stat:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 4px;
 }
 
-.resume-item{
-margin-bottom:25px;
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.resume-title{
-font-weight:600;
+/* SECTIONS */
+.section {
+  padding: 70px 24px;
 }
 
-.footer{
-background:var(--primary);
-color:white;
-padding:30px 0;
-text-align:center;
+.section-alt { background: var(--light); }
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
 }
 
-@media(max-width:900px){
-.grid{grid-template-columns:1fr}
-.profile-block{grid-template-columns:1fr}
-.hero h1{font-size:30px}
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
 
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* COMPETENCIES GRID */
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.comp-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+  border-top: 3px solid var(--accent);
+}
+
+.comp-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comp-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* EXPERIENCE */
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child { border-bottom: none; }
+
+.exp-meta { padding-top: 4px; }
+
+.exp-dates {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.exp-company {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.exp-role {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.exp-tag {
+  display: inline-block;
+  background: var(--light);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+
+.exp-summary {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.exp-bullets li {
+  font-size: 13.5px;
+  color: var(--muted);
+  padding: 4px 0 4px 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+  top: 5px;
+}
+
+/* TECH STACK */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-pill {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 20px;
+}
+
+.tech-pill.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+}
+
+/* CERTS */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cert-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cert-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.cert-detail {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cert-status {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.cert-status.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.cert-status.progress {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.contact-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.contact-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.contact-value a { color: var(--accent); }
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 13px;
+}
+
+footer span { color: rgba(255,255,255,0.8); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo { display: none; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .comp-grid { grid-template-columns: 1fr; }
+  .exp-item { grid-template-columns: 1fr; gap: 10px; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 30px; }
+}
 </style>
 </head>
 
 <body>
 
-<nav class="nav">
-<div class="container nav-inner">
-<div class="brand">
-  <div class="logo-box">
-    <div class="logo-fp">FP</div>
-    <div class="logo-sub">IT Leadership</div>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="fp-badge">FP</div>
+      <div class="brand-name">
+        Francisco Perez
+        <span>IT Infrastructure &amp; Operations Leadership</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
-  <div class="brand-text">
-    Francisco Perez
-    <small>IT Infrastructure &amp; Operations</small>
-  </div>
-</div>
-</div>
-<div>
-<a href="#about">About</a>
-<a href="#resume">Experience</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
 </nav>
 
-<header class="hero">
-<div class="container">
-<div class="hero-sub">IT Infrastructure & Operations Leadership</div>
-<h1>Reliable IT leadership with hands‑on infrastructure and operational depth</h1>
-<p>
-I help organizations strengthen IT operations, stabilize infrastructure, support business systems,
-and modernize technology environments while keeping day‑to‑day operations running smoothly.
-My profile combines IT leadership, infrastructure expertise, and practical support experience.
-</p>
-<div class="cta">
-<a class="btn btn-primary" href="#contact">Contact</a>
-<a class="btn btn-outline" href="#resume">View Experience</a>
-</div>
-</div>
+<!-- HERO -->
+<header class="hero" id="about">
+  <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="FotoPerfilProfesional.png" alt="Francisco Perez">
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Available · Tampa, FL · Green Card Holder</div>
+      <h1>Francisco <span>Perez</span></h1>
+      <div class="hero-title">IT Manager &nbsp;·&nbsp; Infrastructure &amp; Operations Leadership &nbsp;·&nbsp; Bilingual EN/ES</div>
+      <p class="hero-summary">
+        IT Manager with 28 years of hands-on experience leading enterprise infrastructure, multi-site operations, 
+        ERP systems, and IT teams. Built and ran complete IT departments from the ground up — managing 100+ users, 
+        150–200 devices, and full technology stacks across multiple locations with 99%+ uptime for over two decades.
+      </p>
+      <div class="hero-badges">
+        <span class="badge gold">CompTIA Network+ · Score 836</span>
+        <span class="badge">MCSA Windows Server</span>
+        <span class="badge">28 Years Experience</span>
+        <span class="badge">Multi-Site Operations</span>
+        <span class="badge">ERP · Microsoft 365 · Azure AD</span>
+        <span class="badge">ITIL v4 Framework</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn btn-outline">View Experience</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section id="about">
-<div class="container">
-
-<div class="profile-block">
-<div>
-<img src="FotoPerfilProfesional.png" alt="Francisco Perez" style="width:180px;height:180px;border-radius:12px;object-fit:cover;border:4px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.15);">
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-number">28</div>
+      <div class="stat-label">Years in IT</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">100+</div>
+      <div class="stat-label">Users Managed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">99%+</div>
+      <div class="stat-label">System Uptime</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">130+</div>
+      <div class="stat-label">Field Deployments</div>
+    </div>
+  </div>
 </div>
 
-<div>
-<div class="profile-name">Francisco Perez</div>
-<div class="profile-title">IT Infrastructure & Operations Leadership</div>
-<div class="profile-meta">
-IT Manager • Infrastructure • Operations • Support • Cloud • Business Systems
-</div>
-</div>
-</div>
+<!-- COMPETENCIES -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">What I Bring</div>
+    <h2 class="section-title">Core Competencies</h2>
+    <p class="section-sub">Strategic IT leadership combined with deep hands-on technical expertise across infrastructure, operations, and business systems.</p>
 
-<h2 class="section-title">Professional Profile</h2>
-<p class="section-sub">
-IT professional with over 20 years of experience across infrastructure, IT operations, business systems, and end‑user support. 
-Comfortable working both strategically and hands‑on, supporting organizations that require stability, modernization, and operational reliability.
-</p>
-
-<h2 class="section-title">Key Achievements</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Infrastructure Stability Improvements</h3>
-<p>Improved reliability and reduced operational disruptions across IT environments.</p>
-</div>
-
-<div class="card">
-<h3>ERP & Reporting Continuity</h3>
-<p>Maintained reporting and business system continuity during technology transitions.</p>
-</div>
-
-<div class="card">
-<h3>Operational Cost Optimization</h3>
-<p>Reduced infrastructure overhead and improved lifecycle management.</p>
-</div>
-
-<div class="card">
-<h3>IT Operations Modernization</h3>
-<p>Structured IT processes and improved support workflows.</p>
-</div>
-
-<div class="card">
-<h3>Cloud & Microsoft 365 Adoption</h3>
-<p>Guided cloud adoption and collaboration improvements.</p>
-</div>
-
-<div class="card">
-<h3>Hands-on Technical Leadership</h3>
-<p>Balanced IT leadership with direct technical execution.</p>
-</div>
-
-</div>
-</div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <h4>Infrastructure &amp; Systems</h4>
+        <p>Windows Server (2003–2022), Active Directory, DNS/DHCP, Group Policy, VMware/Hyper-V, Veeam Backup &amp; DR, TCP/IP, VLANs, VPN</p>
+      </div>
+      <div class="comp-card">
+        <h4>Cloud &amp; Microsoft 365</h4>
+        <p>Microsoft 365 (Exchange, Teams, SharePoint, Intune), Azure AD, Intune Autopilot, endpoint management, cloud migration planning</p>
+      </div>
+      <div class="comp-card">
+        <h4>ERP &amp; Business Systems</h4>
+        <p>ERP administration (Exactus/Softland), SQL Server DBA, Oracle, reporting systems, user training, vendor coordination</p>
+      </div>
+      <div class="comp-card">
+        <h4>IT Leadership &amp; Management</h4>
+        <p>Solo IT ownership, team leadership, help desk oversight, vendor management, SLA compliance, budget control under $50K annually</p>
+      </div>
+      <div class="comp-card">
+        <h4>Cybersecurity &amp; DR</h4>
+        <p>Symantec Endpoint Protection, security policy enforcement, disaster recovery planning, backup strategy (Full/Differential/Log), RTO/RPO</p>
+      </div>
+      <div class="comp-card">
+        <h4>Field &amp; Support Operations</h4>
+        <p>130+ enterprise deployments in Tampa Bay, structured cabling, POS, networking, 98% on-time rate, 90/100 Field Nation Provider Score</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="resume">
-<div class="container">
-<h2 class="section-title">Experience Highlights</h2>
-<p class="section-sub">
-Positioned for IT Manager, IT Operations, Infrastructure, and Senior Technical Support roles.
-</p>
+<!-- TECH STACK -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Technologies</div>
+    <h2 class="section-title">Technical Stack</h2>
+    <p class="section-sub">Hands-on experience across the full infrastructure and operations stack.</p>
 
-<div class="resume-block">
-
-<div class="resume-item">
-<div class="resume-title">IT Infrastructure & Operations Leadership</div>
-<p>Oversight of IT operations, infrastructure planning, vendor coordination, and business systems support.</p>
-</div>
-
-<div class="resume-item">
-<div class="resume-title">Infrastructure and Systems Administration</div>
-<p>Hands-on support across Windows, Microsoft 365, networking, deployment, and user environments.</p>
-</div>
-
-<div class="resume-item">
-<div class="resume-title">ERP and Reporting Environments</div>
-<p>Support for ERP platforms, reporting continuity, and operational stability.</p>
-</div>
-
-</div>
-</div>
+    <div class="tech-grid">
+      <span class="tech-pill featured">Windows Server</span>
+      <span class="tech-pill featured">Active Directory</span>
+      <span class="tech-pill featured">Microsoft 365</span>
+      <span class="tech-pill featured">VMware ESXi</span>
+      <span class="tech-pill featured">Veeam</span>
+      <span class="tech-pill">Azure AD</span>
+      <span class="tech-pill">Intune / Autopilot</span>
+      <span class="tech-pill">Hyper-V</span>
+      <span class="tech-pill">DNS / DHCP</span>
+      <span class="tech-pill">Group Policy</span>
+      <span class="tech-pill">SQL Server</span>
+      <span class="tech-pill">Oracle DB</span>
+      <span class="tech-pill">TCP/IP / VLANs</span>
+      <span class="tech-pill">VPN</span>
+      <span class="tech-pill">Symantec EP</span>
+      <span class="tech-pill">PowerShell</span>
+      <span class="tech-pill">Cisco / Ubiquiti</span>
+      <span class="tech-pill">Low Voltage Cabling</span>
+      <span class="tech-pill">POS Systems</span>
+      <span class="tech-pill">Freshservice</span>
+    </div>
+  </div>
 </section>
 
-<section id="services">
-<div class="container">
-<h2 class="section-title">Services</h2>
-<p class="section-sub">
-Technology advisory and operational support for organizations seeking stability and modernization.
-</p>
+<!-- EXPERIENCE -->
+<section class="section section-alt" id="experience">
+  <div class="section-inner">
+    <div class="section-label">Career History</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-sub">28 years of progressive IT leadership across manufacturing, services, and enterprise field operations.</p>
 
-<div class="grid">
+    <!-- Fosforera -->
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-dates">2004 — 2024</div>
+        <div class="exp-company">Fosforera del Caribe<br>Dominican Republic<br>Manufacturing · Multi-Site</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">IT Manager &amp; Infrastructure Lead</div>
+        <div class="exp-tag">20 Years · Sole IT Ownership</div>
+        <p class="exp-summary">
+          Built and led the entire IT department from the ground up for a 100+ user, multi-site manufacturing organization. 
+          Owned all technology decisions, infrastructure, ERP administration, vendor relationships, and IT strategy for two decades — 
+          maintaining 99%+ system uptime throughout.
+        </p>
+        <ul class="exp-bullets">
+          <li>Managed full IT infrastructure across multiple sites: Windows Server (2003–2016), VMware/Hyper-V virtualization, Microsoft 365, Azure AD, VPN, and telecom — supporting 100+ users and 150–200 devices.</li>
+          <li>Administered Exactus/Softland ERP across finance, inventory, procurement, and operations — coordinating updates, user access, integrations, and custom reporting.</li>
+          <li>Designed and implemented disaster recovery strategy using Veeam Backup with Full, Differential, and Transaction Log backups every 30 minutes — defined RTO/RPO targets with Point-in-Time recovery.</li>
+          <li>Executed Windows Server in-place upgrades across generations: 2003 → 2008 → 2008 R2 → 2012 → 2016 — maintaining production continuity with documented rollback strategies.</li>
+          <li>Deployed and managed Symantec Endpoint Protection enterprise-wide: server installation, agent deployment, incident database, and recovery of compromised endpoints.</li>
+          <li>Managed IT budget under $50,000 annually — vendor contracts, SLA agreements, hardware/software procurement, and cost optimization across all locations.</li>
+          <li>Led Microsoft 365 cloud migration, server virtualization, and infrastructure modernization — all executed without external consultants.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>IT Infrastructure Assessment</h3>
-<p>Review of infrastructure, risks, and improvement opportunities.</p>
-</div>
+    <!-- Field Nation -->
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-dates">2024 — Present</div>
+        <div class="exp-company">Field Nation<br>Tampa Bay, FL<br>Enterprise Field Operations</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">IT Field Technician · Infrastructure Specialist</div>
+        <div class="exp-tag">130+ Assignments · 90/100 Provider Score</div>
+        <p class="exp-summary">
+          Independent field technician maintaining hands-on infrastructure currency across enterprise client environments 
+          in the Tampa Bay area while pursuing IT Manager opportunities.
+        </p>
+        <ul class="exp-bullets">
+          <li>Completed 130+ assignments across Server &amp; Networking (23), Low Voltage Cabling (32), Office Equipment (24), POS (9), Cameras (4), Access &amp; Alarms (5), and Telecom (4).</li>
+          <li>Achieved 90/100 Provider Success Score, 98% on-time rate (zero late check-ins), and consistent 5-star buyer ratings — recognized for communication, time management, and following instructions.</li>
+          <li>Performed Windows re-imaging and device provisioning via Intune Autopilot across multiple enterprise client environments.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>IT Operations Support</h3>
-<p>Stabilization of day‑to‑day IT operations.</p>
-</div>
+    <!-- Inmuebleca -->
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-dates">2001 — 2004</div>
+        <div class="exp-company">Inmuebleca C. Por A.<br>Dominican Republic<br>Real Estate Services</div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">IT Manager</div>
+        <div class="exp-tag">3 Years</div>
+        <ul class="exp-bullets">
+          <li>Managed Windows Server environments, Active Directory, workstation deployments, networking, and SQL Server support for a 50+ user organization.</li>
+          <li>Administered Macola ERP and provided day-to-day production support across all departments.</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="card">
-<h3>Cloud & Microsoft 365</h3>
-<p>Guidance for cloud adoption and endpoint management.</p>
-</div>
-
-<div class="card">
-<h3>ERP & Business Systems</h3>
-<p>Support for ERP and reporting continuity.</p>
-</div>
-
-<div class="card">
-<h3>Fractional IT Leadership</h3>
-<p>Flexible IT leadership support.</p>
-</div>
-
-<div class="card">
-<h3>Senior Technical Support</h3>
-<p>Hands-on infrastructure and support assistance.</p>
-</div>
-
-</div>
-</div>
+  </div>
 </section>
 
-<section id="contact">
-<div class="container">
-<h2 class="section-title">Contact</h2>
-<p class="section-sub">
-Open to IT Manager, IT Operations, Infrastructure, and Senior Support opportunities.
-</p>
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <div class="section-inner">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <p class="section-sub">Active credentials and ongoing professional development aligned with current enterprise IT standards.</p>
 
-<div class="grid">
-<div class="card">
-<h3>Email</h3>
-<p><a href="mailto:fperezcordero@gmail.com">fperezcordero@gmail.com</a></p>
-</div>
-
-<div class="card">
-<h3>LinkedIn</h3>
-<p><a href="https://www.linkedin.com/in/francisco-perez-tech" target="_blank" rel="noreferrer">linkedin.com/in/francisco-perez-tech</a></p>
-</div>
-
-<div class="card">
-<h3>Location</h3>
-<p>Tampa, Florida</p>
-</div>
-</div>
-</div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">B.S. Information Systems</div>
+          <div class="cert-detail">Universidad Dominicana O&amp;M</div>
+          <span class="cert-status active">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">✅</div>
+        <div>
+          <div class="cert-name">CompTIA Network+</div>
+          <div class="cert-detail">N10-009 · Score: 836 · Valid through March 2029</div>
+          <span class="cert-status active">Active · 2026</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">✅</div>
+        <div>
+          <div class="cert-name">MCSA Windows Server 2008</div>
+          <div class="cert-detail">Microsoft Certified Solutions Associate</div>
+          <span class="cert-status active">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⏳</div>
+        <div>
+          <div class="cert-name">MS-900 Microsoft 365 Fundamentals</div>
+          <div class="cert-detail">Microsoft · Currently pursuing</div>
+          <span class="cert-status progress">In Progress</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⏳</div>
+        <div>
+          <div class="cert-name">AZ-104 Azure Administrator</div>
+          <div class="cert-detail">Microsoft Azure · Currently pursuing</div>
+          <span class="cert-status progress">In Progress</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⏳</div>
+        <div>
+          <div class="cert-name">ITIL v4 Foundation</div>
+          <div class="cert-detail">IT Service Management · Currently pursuing</div>
+          <span class="cert-status progress">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-Francisco Perez — IT Infrastructure & Operations Leadership
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Open to IT Manager, Infrastructure Lead, and Senior IT Operations opportunities in the Tampa Bay area.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:fperezcordero@gmail.com">fperezcordero@gmail.com</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value"><a href="tel:8139707323">(813) 970-7323</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value"><a href="https://www.linkedin.com/in/francisco-perez-tech" target="_blank">linkedin.com/in/francisco-perez-tech</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>Francisco Perez</span> · IT Infrastructure &amp; Operations Leadership · Tampa, FL · Green Card Holder · Bilingual EN/ES
 </footer>
 
 </body>
