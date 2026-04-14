@@ -55,11 +55,6 @@ font-weight:600;
 font-size:18px;
 }
 
-.brand img{
-height:42px;
-width:auto;
-display:block;
-}
 
 .brand-text{
 line-height:1.15;
@@ -70,6 +65,27 @@ display:block;
 font-size:12px;
 font-weight:500;
 opacity:.8;
+margin-top:2px;
+}
+
+.logo-box{
+background:linear-gradient(135deg,#1f5fb6,#4d9cff);
+border-radius:8px;
+padding:6px 8px;
+text-align:center;
+color:white;
+min-width:50px;
+}
+
+.logo-fp{
+font-size:16px;
+font-weight:700;
+line-height:1;
+}
+
+.logo-sub{
+font-size:9px;
+opacity:.85;
 margin-top:2px;
 }
 
@@ -213,10 +229,14 @@ text-align:center;
 <nav class="nav">
 <div class="container nav-inner">
 <div class="brand">
-<img src="logo-fp-header.png" alt="Francisco Perez logo">
-<div class="brand-text">
-Francisco Perez
-<small>IT Infrastructure &amp; Operations</small>
+  <div class="logo-box">
+    <div class="logo-fp">FP</div>
+    <div class="logo-sub">IT Leadership</div>
+  </div>
+  <div class="brand-text">
+    Francisco Perez
+    <small>IT Infrastructure &amp; Operations</small>
+  </div>
 </div>
 </div>
 <div>
